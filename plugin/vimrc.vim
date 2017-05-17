@@ -62,7 +62,7 @@ set shiftwidth=4
 set expandtab
 
 " Use `Ctrl-L` to clear the highlighting of :set hlsearch.
-nnoremap <silent> <C-/> :nohlsearch<CR><C-/>
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 
 " Always show window statuses, even if there's only one.
 set laststatus=2
