@@ -10,14 +10,14 @@ end
 
 "" Basics
 
- set runtimepath^=~/.vim/bundle/ctrlp.vim
- 15 let g:ctrlp_match_window = 'bottom,order:ttb'
- 16 let g:ctrlp_switch_buffer = 0
- 17 let g:ctrlp_working_path_mode = 0
- 18 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
- 19 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
- 20 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
- 21 set wildignore+=*.pdf,*.psd
+" set runtimepath^=~/.vim/bundle/ctrlp.vim
+" let g:ctrlp_match_window = 'bottom,order:ttb'
+" let g:ctrlp_switch_buffer = 0
+" let g:ctrlp_working_path_mode = 0
+" let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+" set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
+" set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
+" set wildignore+=*.pdf,*.psd
 
 " Disable strange Vi defaults.
 set nocompatible
