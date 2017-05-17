@@ -48,8 +48,8 @@ set ttimeoutlen=100
 set incsearch
 
 " Indent using two spaces.
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 " Use `Ctrl-L` to clear the highlighting of :set hlsearch.
@@ -115,28 +115,11 @@ if &t_Co == 8 && $TERM !~# '^linux'
   set t_Co=16
 endif
 
-
-" Load matchit.vim, but only if the user hasn't installed a newer version.
-if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
-  runtime! macros/matchit.vim
-endif
-
 " `Ctrl-U` in insert mode deletes a lot. Use `Ctrl-G` u to first break undo,
 " so that you can undo `Ctrl-U` without undoing what you typed before it.
 inoremap <C-U> <C-G>u<C-U>
 
-" Avoid problems with fish shell
-" ([issue](https://github.com/tpope/vim-sensible/issues/50)).
-if &shell =~# 'fish$'
-  set shell=/bin/bash
-endif
-
 "" Extras
-
-" Set monako font if using macvim
-if has("gui_macvim")
-  set guifont=Monaco:h13
-endif
 
 " Keep flags when repeating last substitute command.
 nnoremap & :&&<CR>
@@ -223,9 +206,6 @@ set smartcase
 
 " Use dash as word separator.
 set iskeyword+=-
-
-" Add gems.tags to files searched for tags.
-set tags+=gems.tags
 
 " Disable output, vcs, archive, rails, temp and backup files.
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
