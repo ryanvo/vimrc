@@ -10,6 +10,15 @@ end
 
 "" Basics
 
+ set runtimepath^=~/.vim/bundle/ctrlp.vim
+ 15 let g:ctrlp_match_window = 'bottom,order:ttb'
+ 16 let g:ctrlp_switch_buffer = 0
+ 17 let g:ctrlp_working_path_mode = 0
+ 18 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+ 19 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
+ 20 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
+ 21 set wildignore+=*.pdf,*.psd
+
 " Disable strange Vi defaults.
 set nocompatible
 
@@ -53,7 +62,7 @@ set shiftwidth=4
 set expandtab
 
 " Use `Ctrl-L` to clear the highlighting of :set hlsearch.
-nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+nnoremap <silent> <C-/> :nohlsearch<CR><C-/>
 
 " Always show window statuses, even if there's only one.
 set laststatus=2
